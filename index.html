@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Offer - Spruces Co for SHAPE</title>
+    <title>Cleaning Proposal for Rick's Asset Maintenance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,58 +19,51 @@
             font-size: 1.875rem;
             font-weight: 600;
         }
-        .summary-card {
+        .plan-card {
             border: 1px solid #d1d5db;
             border-radius: 0.75rem;
             padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            background-color: #f9fafb;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
-        .summary-card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+        .plan-card.recommended {
+            border-width: 2px;
+            border-color: #2563eb;
+            position: relative;
         }
-        .summary-card .price {
+        .recommended-badge {
+            position: absolute;
+            top: -1rem;
+            right: 1.5rem;
+            background-color: #2563eb;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .price {
             font-size: 2.25rem;
             font-weight: 700;
-            color: #111827;
         }
-         .summary-card .discount-price {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #16a34a;
-        }
-        .table-container {
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 0.75rem 1rem;
-            text-align: left;
+        .checklist-table th, .checklist-table td {
+            padding: 0.75rem;
             border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
         }
-        thead th {
-            background-color: #f3f4f6;
-            font-weight: 600;
-            color: #374151;
+        .checklist-table tr:last-child td {
+            border-bottom: none;
         }
-        tbody tr:nth-child(even) {
-            background-color: #f9fafb;
+        .tick {
+            color: #16a34a;
+            font-weight: bold;
         }
-        .stage-total td {
-            font-weight: 600;
-            background-color: #e5e7eb;
-        }
-         /* Sticky Header */
-        #navbar {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            transition: top 0.3s;
+        .task-description {
+            font-size: 0.875rem;
+            color: #6b7280;
+            padding-left: 1rem;
+            padding-bottom: 0.75rem;
         }
     </style>
 </head>
@@ -82,329 +75,180 @@
         <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 pb-4 border-b">
             <div class="flex items-center space-x-4">
                 <img src="./download.png" alt="Spruces Co Logo" class="h-10">
-                 <span class="text-4xl font-thin text-gray-300">|</span>
-                <img src="./SHAPE_WordMark_DGREY.svg" alt="SHAPE Logo" class="h-12">
             </div>
             <div class="mt-4 sm:mt-0 text-right">
-                <h1 class="text-2xl font-bold text-gray-900">Final Offer (BAFO)</h1>
-                <p class="text-sm text-gray-500">Date: 17 September 2025</p>
+                <h1 class="text-2xl font-bold text-gray-900">Weekly Cleaning Proposal</h1>
+                <p class="text-sm text-gray-500">For: Rick's Asset Maintenance</p>
             </div>
         </header>
 
-        <!-- Sticky Navigation -->
-        <nav id="navbar" class="bg-white/80 backdrop-blur-md shadow-md rounded-lg mb-8 p-2">
-            <ul class="flex flex-wrap justify-center items-center space-x-4 text-sm font-medium">
-                <li><a href="#summary" class="text-gray-600 hover:text-blue-600 p-2">Summary</a></li>
-                <li><a href="#discounts" class="text-gray-600 hover:text-blue-600 p-2">Special Discounts</a></li>
-                <li><a href="#scope" class="text-gray-600 hover:text-blue-600 p-2">Scope of Work</a></li>
-                <li><a href="#services" class="text-gray-600 hover:text-blue-600 p-2">Included Services</a></li>
-                <li><a href="#bcc" class="text-gray-600 hover:text-blue-600 p-2">BCC CBD Fitout</a></li>
-                <li><a href="#oconnell" class="text-gray-600 hover:text-blue-600 p-2">O'Connell Terrace</a></li>
-            </ul>
-        </nav>
-
-        <!-- Main Image -->
-        <section class="mb-12">
-            <img src="./proposal_header_image.png" alt="Brisbane City Skyline" class="block w-full lg:w-[65%] mx-auto h-auto rounded-lg shadow-lg object-cover" onerror="this.style.display='none'">
+        <!-- Introduction -->
+        <section class="mb-12 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Keeping Your New Molendinar Office Pristine</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-600">
+                Hi George, it was great speaking with you. As discussed, here is a proposal tailored to your new, newly-renovated office at Shed 15, Enterprise Street. We understand the importance of maintaining a high standard of cleanliness from day one and have designed these options to ensure your space remains immaculate, reliable, and impressive for your team and visitors.
+            </p>
         </section>
 
-        <!-- Executive Summary -->
-        <section id="summary" class="mb-12">
-            <h2 class="section-title">Executive Summary</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="summary-card">
-                    <h3>Lump Sum Total</h3>
-                    <p class="price">$296,037.79 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
-                    <p class="text-sm text-gray-600 mt-2">Standard pricing with a 12.5% surcharge applied for project financing and extended payment terms.</p>
+        <!-- Site Image -->
+        <section class="mb-12">
+            <img src="./rixam_office_1.png" alt="Rick's Asset Maintenance Office" class="block w-full lg:w-2/3 mx-auto h-auto rounded-lg shadow-lg object-cover" onerror="this.style.display='none'">
+        </section>
+
+        <!-- Pricing Options -->
+        <section class="mb-12">
+            <h2 class="section-title text-center">Your Weekly Cleaning Options</h2>
+            <div class="text-center mb-8">
+                 <p class="text-lg text-gray-700">All plans are charged at <strong>$65 + GST per hour</strong>.</p>
+                 <p class="text-lg font-semibold text-green-600">Receive a 10% discount when you pay for the month upfront!</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Budget Plan -->
+                <div class="plan-card">
+                    <h3 class="text-xl font-bold text-center mb-4">Budget</h3>
+                    <p class="text-center text-gray-600 mb-6">Covers the essential high-traffic areas to keep your office tidy.</p>
+                    <div class="text-center my-4">
+                        <span class="price">$130</span>
+                        <span class="text-gray-500">/ week + GST</span>
+                    </div>
+                    <p class="text-center font-semibold mb-6">2 Hours per Visit</p>
+                    <div class="text-center bg-gray-100 p-4 rounded-lg mt-auto">
+                        <p class="font-bold">Monthly Upfront: <span class="text-green-600">$506.61</span></p>
+                        <p class="text-sm text-gray-500">(Standard monthly: $562.90)</p>
+                    </div>
                 </div>
-                 <div class="summary-card border-blue-600 bg-blue-50">
-                    <h3>BAFO (Standard Terms)</h3>
-                    <p class="text-blue-700 text-2xl font-bold">$276,301.94 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
-                    <p class="text-sm text-blue-700 mt-2">Includes a 5% fee for comprehensive project management, insurance, and logistics.</p>
+                <!-- Premium Plan -->
+                <div class="plan-card recommended">
+                    <div class="recommended-badge">Recommended</div>
+                    <h3 class="text-xl font-bold text-center mb-4">Premium</h3>
+                    <p class="text-center text-gray-600 mb-6">Our most popular option for a comprehensively clean and professional environment.</p>
+                    <div class="text-center my-4">
+                        <span class="price text-blue-600">$195</span>
+                        <span class="text-gray-500">/ week + GST</span>
+                    </div>
+                     <p class="text-center font-semibold mb-6">3 Hours per Visit</p>
+                    <div class="text-center bg-blue-50 p-4 rounded-lg mt-auto">
+                        <p class="font-bold">Monthly Upfront: <span class="text-green-600">$759.92</span></p>
+                        <p class="text-sm text-gray-500">(Standard monthly: $844.35)</p>
+                    </div>
                 </div>
-                <div class="summary-card border-green-600 bg-green-50">
-                    <h3>FAFO (Best Offer)</h3>
-                    <p class="discount-price">$263,144.70 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
-                    <p class="text-sm text-green-700 mt-2"><strong>Our lowest price.</strong> Achieved via discounts for 30-day nett payment and uninterrupted site access.</p>
+                <!-- Ultra Plan -->
+                <div class="plan-card">
+                    <h3 class="text-xl font-bold text-center mb-4">Ultra</h3>
+                    <p class="text-center text-gray-600 mb-6">For a meticulous clean with rotating deep-clean tasks and special floor care.</p>
+                    <div class="text-center my-4">
+                        <span class="price">$227.50</span>
+                        <span class="text-gray-500">/ week + GST</span>
+                    </div>
+                     <p class="text-center font-semibold mb-6">3.5 Hours per Visit</p>
+                    <div class="text-center bg-gray-100 p-4 rounded-lg mt-auto">
+                        <p class="font-bold">Monthly Upfront: <span class="text-green-600">$886.57</span></p>
+                        <p class="text-sm text-gray-500">(Standard monthly: $985.08)</p>
+                    </div>
                 </div>
             </div>
         </section>
         
-        <!-- Special Discounts -->
-        <section id="discounts" class="mb-12">
-             <h2 class="section-title">Special Discount Terms</h2>
-             <div class="bg-amber-100 border-l-4 border-amber-500 text-amber-900 p-6 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-bold mb-2">Important: Additional 5% Discount Condition</h3>
-                <p class="text-lg">To achieve our best and final offer, we can provide an additional <strong>5% discount</strong> on the total contract value. This discount is conditional upon the following:</p>
-                <ul class="list-disc list-inside mt-4 space-y-2 font-semibold">
-                    <li><strong>Uninterrupted Access:</strong> Our cleaning teams are granted access to complete areas after all construction work and trade activities in those areas have ceased.</li>
-                    <li><strong>No Re-cleans Due to Other Trades:</strong> The pricing assumes that areas will not require re-cleaning due to dust, debris, or traffic from other trades after our clean has been completed.</li>
+        <!-- Special Offer -->
+        <section class="mb-12">
+             <div class="bg-teal-50 border-l-4 border-teal-500 text-teal-900 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-2">Special Offer: 2-Week Paid Trial</h3>
+                <p class="text-lg">Experience our commitment to quality firsthand with no long-term commitment. Select any of our plans for a two-week trial period.</p>
+                <ul class="list-disc list-inside mt-4 space-y-2">
+                    <li><strong>No Strings Attached:</strong> After the two weeks, you can decide if you'd like to continue on a weekly or monthly basis.</li>
+                    <li><strong>See the Difference:</strong> It's the perfect way to witness the reliability and attention to detail our team brings to your new office.</li>
                 </ul>
-                <p class="mt-4">This allows our teams to work with maximum efficiency, and we pass those savings directly on to SHAPE.</p>
             </div>
         </section>
 
-        <!-- Scope of Work -->
-        <section id="scope" class="mb-12">
-            <h2 class="section-title">Scope of Work & Task Schedule</h2>
-            <div class="table-container shadow-md rounded-lg">
-                <table>
+        <!-- Detailed Service Checklist -->
+        <section class="mb-12">
+            <h2 class="section-title text-center">Detailed Service Checklist</h2>
+            <div class="shadow-md rounded-lg overflow-hidden">
+                <table class="w-full text-left checklist-table">
                     <thead class="bg-gray-100">
                         <tr>
-                            <th class="w-1/4">Task</th>
-                            <th>Details</th>
+                            <th class="w-1/2">Task</th>
+                            <th class="text-center">Budget</th>
+                            <th class="text-center">Premium</th>
+                            <th class="text-center">Ultra</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><strong>Debris, Dust & Plastics Removal</strong></td><td>Sweep/vacuum large debris, dust all surfaces (walls, ceilings, fixtures), remove protective plastics/tapes, collect and bag construction waste.</td></tr>
-                        <tr><td><strong>Windows, Tracks & Seals</strong></td><td>Clean interior glass surfaces, vacuum window tracks, wipe down frames and sills.</td></tr>
-                        <tr><td><strong>Walls & Fixtures</strong></td><td>Dust walls top-to-bottom, spot clean minor marks, wipe switch plates, outlets, light fixtures, vents, and joinery.</td></tr>
-                        <tr><td><strong>Kitchens & Bathrooms</strong></td><td>Deep clean and sanitize sinks, countertops, toilets, showers/tubs; clean inside/outside of appliances; polish mirrors and fixtures.</td></tr>
-                        <tr><td><strong>Floors (General Clean)</strong></td><td>Sweep/vacuum all floor types, mop hard floors, clean baseboards, and perform a thorough vacuum of carpets.</td></tr>
-                        <tr><td><strong>Final Check & Fix-ups</strong></td><td>Perform final walkthrough against a detailed checklist to address any missed spots, smudges, or fingerprints, ensuring a dust-free environment.</td></tr>
-                    </tbody>
-                </table>
-            </div>
-             <div class="mt-6 grid md:grid-cols-2 gap-6">
-                <div class="bg-red-50 border border-red-200 p-4 rounded-lg">
-                    <h4 class="font-bold text-red-800 mb-2">General Exclusions</h4>
-                    <ul class="list-disc list-inside text-red-700 space-y-1">
-                        <li>Exterior building cleaning</li>
-                        <li>External window cleaning</li>
-                        <li>Full carpet shampooing</li>
-                        <li>Pressure washing concrete floors</li>
-                        <li>High-access cleaning (above 2.5m)</li>
-                    </ul>
-                </div>
-                <div class="bg-gray-100 border p-4 rounded-lg">
-                     <h4 class="font-bold text-gray-800 mb-2">A Note on Partnership</h4>
-                    <p class="text-gray-600">This is our 3rd project with SHAPE, and we're invested in our working relationship. We are building custom software to help SHAPE win more from each project and track progress seamlessly.</p>
-                </div>
-            </div>
-        </section>
+                        <tr><td colspan="4"><strong>General</strong></td></tr>
+                        <tr><td>Empty all bins & replace liners</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">All office and kitchen bins are emptied and relined with fresh bags. Bin exteriors are wiped down as needed.</td></tr>
+                        <tr><td>Spot clean entry glass & doors</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">We remove fingerprints and smudges from main entry glass and high-touch door surfaces to maintain a professional entrance.</td></tr>
+                        <tr><td>Wipe down desks & workstations</td><td class="text-center">-</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">Surfaces are cleared of dust and wiped with a pH-neutral cleaner, focusing on creating a clean and hygienic workspace.</td></tr>
+                        <tr><td>High dusting (vents, light fixtures)</td><td class="text-center">-</td><td class="text-center">-</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">Using extension dusters, we remove accumulated dust and cobwebs from hard-to-reach places like vents and lighting.</td></tr>
+                        
+                        <tr><td colspan="4"><strong>Kitchen</strong></td></tr>
+                        <tr><td>Wipe countertops & cabinet exteriors</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">Food preparation surfaces are sanitized, and cabinet doors are wiped to remove spills and fingerprints.</td></tr>
+                        <tr><td>Clean sink & polish tapware</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">The sink is scrubbed to remove food residue and stains, and taps are polished for a streak-free shine.</td></tr>
+                        <tr><td>Clean microwave interior</td><td class="text-center">-</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">We remove food splatters from the inside of the microwave, leaving it clean and odor-free.</td></tr>
 
-        <!-- Additional Services -->
-        <section id="services" class="mb-12">
-            <h2 class="section-title">Additional Included Services</h2>
-            <!-- Comms Rooms -->
-            <div class="mb-8">
-                 <h3 class="text-xl font-semibold mb-4 text-gray-700">Comms Rooms Cleaning</h3>
-                 <div class="table-container shadow-md rounded-lg">
-                    <table>
-                        <thead><tr><th>Description</th><th>Quantity</th><th>Rate</th><th>Total Cost</th></tr></thead>
-                        <tbody>
-                            <tr>
-                                <td>Detailed clean of comms rooms (&lt;20m²)</td>
-                                <td>18</td>
-                                <td>$225.00 per room</td>
-                                <td class="font-bold">$4,050.00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- Progressive Cleaning -->
-            <div>
-                 <h3 class="text-xl font-semibold mb-4 text-gray-700">Progressive Cleaning Schedule</h3>
-                 <div class="table-container shadow-md rounded-lg">
-                    <table>
-                        <thead><tr><th>Phase</th><th>Period</th><th>Weekly Rate</th><th>Duration</th><th>Total Cost</th></tr></thead>
-                        <tbody>
-                            <tr>
-                                <td>Phase 1 (Both Buildings)</td>
-                                <td>29 Sep - 19 Dec 2025</td>
-                                <td>$1,416.00</td>
-                                <td>12 Weeks</td>
-                                <td class="font-semibold">$16,992.00</td>
-                            </tr>
-                            <tr>
-                                <td>Phase 2 (One Building)</td>
-                                <td>From 05 Jan 2026</td>
-                                <td>$708.00</td>
-                                <td>49 Weeks</td>
-                                <td class="font-semibold">$34,692.00</td>
-                            </tr>
-                             <tr class="stage-total">
-                                <td colspan="4">Total Progressive Cleaning</td>
-                                <td>$51,684.00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+                        <tr><td colspan="4"><strong>Toilets & Shower (x6)</strong></td></tr>
+                        <tr><td>Clean & sanitize toilets and urinals</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">Every toilet is thoroughly cleaned and disinfected inside and out, including the base and surrounding areas.</td></tr>
+                        <tr><td>Clean & sanitize basins, polish tapware</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">Basins are scrubbed and sanitized, and all chrome fixtures are polished to remove water spots.</td></tr>
+                        <tr><td>Clean shower & glass screen</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">The disabled access shower, including the glass screen and tiles, is cleaned to remove soap scum and build-up.</td></tr>
+                        <tr><td>Refill consumables (client-supplied)</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">We will restock your client-supplied toilet paper, hand towels, and soap dispensers as required.</td></tr>
 
-        <!-- Building 1: BCC CBD Fitout -->
-        <section id="bcc" class="mb-12">
-            <h2 class="section-title">Building 1: Brisbane City Council CBD Fitout</h2>
-             <div class="summary-card bg-white mb-6">
-                <h3>BCC Fitout Grand Total (Builders & Final)</h3>
-                <p class="price">$194,547.57 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
-            </div>
-
-            <h3 class="text-xl font-semibold mb-4 text-gray-700">Builders & Final Clean Breakdown</h3>
-            <!-- STAGE 1 -->
-            <div class="mb-6 table-container shadow-md rounded-lg">
-                <table>
-                    <thead><tr><th colspan="5">Stage 1</th></tr></thead>
-                    <tbody>
-                        <tr class="font-semibold bg-gray-50"><td>Level</td><td>Area (m²)</td><td>Total Cost</td><td>Builders Clean (50%)</td><td>Final Clean (50%)</td></tr>
-                        <tr><td>Podium Level 1</td><td>808.60</td><td>$5,660.20</td><td>$2,830.10</td><td>$2,830.10</td></tr>
-                        <tr class="stage-total"><td colspan="2">Stage 1 Total</td><td>$5,660.20</td><td>$2,830.10</td><td>$2,830.10</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- STAGE 2 -->
-             <div class="mb-6 table-container shadow-md rounded-lg">
-                <table>
-                    <thead><tr><th colspan="5">Stage 2</th></tr></thead>
-                    <tbody>
-                        <tr class="font-semibold bg-gray-50"><td>Level</td><td>Area (m²)</td><td>Total Cost</td><td>Builders Clean (50%)</td><td>Final Clean (50%)</td></tr>
-                        <tr><td>Level 6</td><td>1,411.23</td><td>$9,878.61</td><td>$4,939.31</td><td>$4,939.31</td></tr>
-                        <tr><td>Level 7</td><td>1,411.34</td><td>$9,879.38</td><td>$4,939.69</td><td>$4,939.69</td></tr>
-                        <tr><td>Level 8</td><td>1,411.34</td><td>$9,879.38</td><td>$4,939.69</td><td>$4,939.69</td></tr>
-                        <tr><td>Podium Level 2</td><td>675.58</td><td>$4,729.06</td><td>$2,364.53</td><td>$2,364.53</td></tr>
-                        <tr class="stage-total"><td colspan="2">Stage 2 Total</td><td>$34,366.43</td><td>$17,183.22</td><td>$17,183.22</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- STAGE 3 -->
-            <div class="mb-6 table-container shadow-md rounded-lg">
-                <table>
-                    <thead><tr><th colspan="5">Stage 3</th></tr></thead>
-                    <tbody>
-                        <tr class="font-semibold bg-gray-50"><td>Level</td><td>Area (m²)</td><td>Total Cost</td><td>Builders Clean (50%)</td><td>Final Clean (50%)</td></tr>
-                        <tr><td>Level 9</td><td>1,411.34</td><td>$9,879.38</td><td>$4,939.69</td><td>$4,939.69</td></tr>
-                        <tr><td>Level 10</td><td>1,411.34</td><td>$9,879.38</td><td>$4,939.69</td><td>$4,939.69</td></tr>
-                        <tr><td>Level 11</td><td>1,411.34</td><td>$9,879.38</td><td>$4,939.69</td><td>$4,939.69</td></tr>
-                        <tr><td>Level 12</td><td>1,411.83</td><td>$9,882.81</td><td>$4,941.41</td><td>$4,941.41</td></tr>
-                        <tr><td>Library (1R)</td><td>423.14</td><td>$2,961.98</td><td>$1,480.99</td><td>$1,480.99</td></tr>
-                        <tr class="stage-total"><td colspan="2">Stage 3 Total</td><td>$42,482.93</td><td>$21,241.47</td><td>$21,241.47</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- STAGE 4 -->
-            <div class="mb-6 table-container shadow-md rounded-lg">
-                <table>
-                    <thead><tr><th colspan="5">Stage 4</th></tr></thead>
-                    <tbody>
-                        <tr class="font-semibold bg-gray-50"><td>Level</td><td>Area (m²)</td><td>Total Cost</td><td>Builders Clean (50%)</td><td>Final Clean (50%)</td></tr>
-                        <tr><td>Level 13</td><td>1,411.85</td><td>$9,882.95</td><td>$4,941.48</td><td>$4,941.48</td></tr>
-                        <tr><td>Level 14</td><td>1,411.85</td><td>$9,882.95</td><td>$4,941.48</td><td>$4,941.48</td></tr>
-                        <tr><td>Level 15</td><td>1,414.12</td><td>$9,898.84</td><td>$4,949.42</td><td>$4,949.42</td></tr>
-                        <tr><td>Level 16</td><td>1,406.03</td><td>$9,842.21</td><td>$4,921.11</td><td>$4,921.11</td></tr>
-                        <tr class="stage-total"><td colspan="2">Stage 4 Total</td><td>$39,506.95</td><td>$19,753.48</td><td>$19,753.48</td></tr>
-                    </tbody>
-                </table>
-            </div>
-             <!-- STAGE 5 -->
-            <div class="mb-6 table-container shadow-md rounded-lg">
-                <table>
-                    <thead><tr><th colspan="5">Stage 5</th></tr></thead>
-                    <tbody>
-                        <tr class="font-semibold bg-gray-50"><td>Level</td><td>Area (m²)</td><td>Total Cost</td><td>Builders Clean (50%)</td><td>Final Clean (50%)</td></tr>
-                        <tr><td>Level 17</td><td>1,410.05</td><td>$9,870.35</td><td>$4,935.18</td><td>$4,935.18</td></tr>
-                        <tr><td>Level 18</td><td>1,415.58</td><td>$9,909.06</td><td>$4,954.53</td><td>$4,954.53</td></tr>
-                        <tr><td>Level 19</td><td>1,459.64</td><td>$10,217.48</td><td>$5,108.74</td><td>$5,108.74</td></tr>
-                        <tr><td>Level 20</td><td>1,458.15</td><td>$10,207.05</td><td>$5,103.53</td><td>$5,103.53</td></tr>
-                        <tr class="stage-total"><td colspan="2">Stage 5 Total</td><td>$40,203.94</td><td>$20,101.97</td><td>$20,101.97</td></tr>
-                    </tbody>
-                </table>
-            </div>
-             <!-- STAGE 6 -->
-            <div class="mb-6 table-container shadow-md rounded-lg">
-                <table>
-                    <thead><tr><th colspan="5">Stage 6</th></tr></thead>
-                    <tbody>
-                        <tr class="font-semibold bg-gray-50"><td>Level</td><td>Area (m²)</td><td>Total Cost</td><td>Builders Clean (50%)</td><td>Final Clean (50%)</td></tr>
-                        <tr><td>Level 21</td><td>1,459.14</td><td>$10,213.98</td><td>$5,106.99</td><td>$5,106.99</td></tr>
-                        <tr><td>Level 22</td><td>1,459.14</td><td>$10,213.98</td><td>$5,106.99</td><td>$5,106.99</td></tr>
-                        <tr><td>Level 23</td><td>1,459.14</td><td>$10,213.98</td><td>$5,106.99</td><td>$5,106.99</td></tr>
-                        <tr><td>L2 Storerooms</td><td>240.78</td><td>$1,685.46</td><td>$842.73</td><td>$842.73</td></tr>
-                        <tr class="stage-total"><td colspan="2">Stage 6 Total</td><td>$32,327.40</td><td>$16,163.70</td><td>$16,163.70</td></tr>
+                        <tr><td colspan="4"><strong>Floors</strong></td></tr>
+                        <tr><td>Vacuum main traffic areas</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">Key walkways and high-traffic floor areas are vacuumed to remove daily dust and debris.</td></tr>
+                        <tr><td>Vacuum all office carpets/rugs</td><td class="text-center">-</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">We perform a thorough vacuum of all carpeted areas, including under desks and along edges.</td></tr>
+                        <tr><td>Mop all hard floors</td><td class="text-center">-</td><td class="text-center tick">✔</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">All hard surfaces, including kitchen and bathroom floors, are mopped using a neutral floor cleaner for a clean, non-slip finish.</td></tr>
+                        <tr><td>Special floor care / spot treatment</td><td class="text-center">-</td><td class="text-center">-</td><td class="text-center tick">✔</td></tr>
+                        <tr><td colspan="4" class="task-description">We address minor, fresh spills or scuffs on carpets and hard floors to prevent staining.</td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- Building 2: O'Connell Terrace -->
-        <section id="oconnell" class="mb-12">
-             <h2 class="section-title">Building 2: O'Connell Terrace</h2>
-             <div class="summary-card bg-white mb-6">
-                <h3>O'Connell Terrace Grand Total</h3>
-                <p class="price">$12,863.13 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
-            </div>
-             <div class="table-container shadow-md rounded-lg">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Area (m²)</th>
-                            <th>Total Cost</th>
-                            <th>Builders Clean (50%)</th>
-                            <th>Final Clean (50%)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Builders and Final Clean</td><td>1,837.59</td><td>$12,863.13</td><td>$6,431.57</td><td>$6,431.57</td></tr>
-                        <tr class="stage-total">
-                            <td colspan="2">O'Connell Terrace Total</td>
-                            <td>$12,863.13</td>
-                            <td>$6,431.57</td>
-                            <td>$6,431.57</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        
-        <!-- Footer -->
+        <!-- Footer / Value Add -->
         <footer class="text-center pt-8 mt-8 border-t">
-             <p class="text-lg font-semibold">We look forward to continuing our partnership with SHAPE.</p>
+             <h2 class="section-title text-center">Our Commitment to Quality & Transparency</h2>
              <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                  <div>
-                    <h4 class="font-bold text-lg mb-2 text-gray-800">Project Performance Insights</h4>
+                    <h4 class="font-bold text-lg mb-2 text-gray-800">Consistent Service Quality</h4>
                     <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
-                        <li><strong>Accurate Forecasting:</strong> Data on average cleaning times allows for precise budget and schedule planning on future stages and projects.</li>
-                        <li><strong>Measurable Quality:</strong> Tracking metrics like the "fix-up rate" provides transparent proof of our high-quality standards and efficiency.</li>
+                        <li><strong>Data-Driven Consistency:</strong> We use metrics to ensure the cleaning time and quality for each area of your office remains consistently high, week after week.</li>
+                        <li><strong>Proactive Quality Checks:</strong> Our system tracks performance and "fix-up rates" to identify and resolve potential issues before you ever have to.</li>
                     </ul>
                     <img src="./project_image_1.png" alt="Room Cleaning Statistics Dashboard" class="w-full h-auto rounded-lg shadow-md object-cover" onerror="this.style.display='none'">
                  </div>
                  <div>
-                    <h4 class="font-bold text-lg mb-2 text-gray-800">Team & Resource Optimization</h4>
+                    <h4 class="font-bold text-lg mb-2 text-gray-800">Reliable & Efficient Team</h4>
                      <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
-                        <li><strong>Performance Management:</strong> We identify our most efficient cleaners and replicate their successful methods across the entire team to boost productivity.</li>
-                        <li><strong>Smarter Allocation:</strong> Data allows us to assign the right personnel to the most critical tasks, ensuring a faster, more effective clean and quicker handover.</li>
+                        <li><strong>Performance Accountability:</strong> We can see detailed statistics for each team member, ensuring accountability and rewarding high-performers.</li>
+                        <li><strong>Optimized Cleaning Flow:</strong> Data helps us create the most efficient cleaning routine for your specific office layout, ensuring nothing is missed.</li>
                     </ul>
                     <img src="./project_image_2.png" alt="Individual Cleaner Statistics" class="w-full h-auto rounded-lg shadow-md object-cover" onerror="this.style.display='none'">
                  </div>
                  <div>
-                    <h4 class="font-bold text-lg mb-2 text-gray-800">Streamlined Project Management</h4>
+                    <h4 class="font-bold text-lg mb-2 text-gray-800">Streamlined Communication</h4>
                     <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
-                        <li><strong>Seamless Onboarding:</strong> Our central portal ensures every team member is fully trained and compliant with site requirements from day one.</li>
-                        <li><strong>Clear Communication:</strong> A dedicated project hub reduces errors and ensures critical information is shared instantly with the entire on-site team.</li>
+                        <li><strong>Seamless Onboarding:</strong> Our central portal ensures your dedicated cleaner is fully briefed on your site's specific needs and requirements.</li>
+                        <li><strong>Clear & Simple Updates:</strong> Our digital-first approach means communication is always clear, simple, and logged for reference.</li>
                     </ul>
                     <img src="./project_image_3.png" alt="Cleaner Onboarding and Communication Portal" class="w-full h-auto rounded-lg shadow-md object-cover" onerror="this.style.display='none'">
                  </div>
              </div>
-             <p class="text-sm text-gray-500 mt-8">Leo Plaza | Spruces Co | finalclean@spruces.co</p>
+             <p class="text-sm text-gray-500 mt-12">Prepared by: Leo Plaza | Spruces Co | finalclean@spruces.co</p>
         </footer>
-
     </div>
-    <script>
-        // Simple script to make navbar sticky and hide on scroll down, show on scroll up
-        let lastScrollTop = 0;
-        const navbar = document.getElementById('navbar');
-        window.addEventListener("scroll", function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                navbar.style.top = "-80px"; 
-            } else {
-                navbar.style.top = "0";
-            }
-            lastScrollTop = scrollTop;
-        });
-    </script>
 </body>
 </html>
 
