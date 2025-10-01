@@ -25,21 +25,13 @@
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             background-color: #f9fafb;
+            display: flex;
+            flex-direction: column;
         }
         .summary-card h3 {
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 1rem;
-        }
-        .summary-card .price {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #111827;
-        }
-         .summary-card .discount-price {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #16a34a;
         }
         .table-container {
             overflow-x: auto;
@@ -95,7 +87,7 @@
         <nav id="navbar" class="bg-white/80 backdrop-blur-md shadow-md rounded-lg mb-8 p-2">
             <ul class="flex flex-wrap justify-center items-center space-x-4 text-sm font-medium">
                 <li><a href="#summary" class="text-gray-600 hover:text-blue-600 p-2">Summary</a></li>
-                <li><a href="#discounts" class="text-gray-600 hover:text-blue-600 p-2">Special Discounts</a></li>
+                <li><a href="#special-offer" class="text-gray-600 hover:text-blue-600 p-2">Special Offer Details</a></li>
                 <li><a href="#scope" class="text-gray-600 hover:text-blue-600 p-2">Scope of Work</a></li>
                 <li><a href="#services" class="text-gray-600 hover:text-blue-600 p-2">Included Services</a></li>
                 <li><a href="#bcc" class="text-gray-600 hover:text-blue-600 p-2">BCC CBD Fitout</a></li>
@@ -111,31 +103,36 @@
         <!-- Executive Summary -->
         <section id="summary" class="mb-12">
             <h2 class="section-title">Executive Summary</h2>
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="summary-card">
                     <h3>Lump Sum Total</h3>
-                    <p class="price">$244,771.54 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
-                    <p class="text-sm text-gray-600 mt-2">Standard pricing with a 12.5% surcharge applied for project financing and extended payment terms.</p>
+                    <p class="text-2xl font-bold text-gray-900">$244,771.54 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
+                    <p class="text-sm text-gray-600 mt-auto pt-2">Standard pricing with a 12.5% surcharge applied for project financing and extended payment terms.</p>
                 </div>
-                 <div class="summary-card border-blue-600 bg-blue-50">
+                 <div class="summary-card">
                     <h3>BAFO (Standard Terms)</h3>
                     <p class="text-blue-700 text-2xl font-bold">$228,453.44 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
-                    <p class="text-sm text-blue-700 mt-2">Includes a 5% fee for comprehensive project management, insurance, and logistics.</p>
+                    <p class="text-sm text-blue-700 mt-auto pt-2">Includes a 5% fee for comprehensive project management, insurance, and logistics.</p>
                 </div>
-                <div class="summary-card border-green-600 bg-green-50">
+                <div class="summary-card">
                     <h3>FAFO (Best Offer)</h3>
-                    <p class="discount-price">$217,574.70 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
-                    <p class="text-sm text-green-700 mt-2"><strong>Our lowest price.</strong> Achieved via discounts for 30-day nett payment and uninterrupted site access.</p>
+                    <p class="text-2xl font-bold text-green-600">$217,574.70 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
+                    <p class="text-sm text-green-700 mt-auto pt-2"><strong>Our lowest price.</strong> Achieved via discounts for 45-day nett payment and uninterrupted site access.</p>
+                </div>
+                <div class="summary-card border-2 border-red-600 bg-red-50">
+                    <h3>Special Workflow Offer</h3>
+                    <p class="text-red-700 text-2xl font-bold">$197,000.00 <span class="text-base font-normal text-gray-500">excl. GST</span></p>
+                    <p class="text-sm text-red-700 mt-auto pt-2"><strong>Deepest Discount.</strong> Contingent on the uninterrupted workflow &amp; 38-day payment terms detailed below.</p>
                 </div>
             </div>
         </section>
         
         <!-- Special Discounts -->
         <section id="discounts" class="mb-12">
-             <h2 class="section-title">Special Discount Terms</h2>
+             <h2 class="section-title">Standard Discount Terms (FAFO)</h2>
              <div class="bg-amber-100 border-l-4 border-amber-500 text-amber-900 p-6 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-bold mb-2">Important: Additional 5% Discount Condition</h3>
-                <p class="text-lg">To achieve our best and final offer, we can provide an additional <strong>5% discount</strong> on the total contract value. This discount is conditional upon the following:</p>
+                <h3 class="text-2xl font-bold mb-2">Important: 5% Discount Condition</h3>
+                <p class="text-lg">To achieve our FAFO price, a <strong>5% discount</strong> is applied. This discount is conditional upon the following:</p>
                 <ul class="list-disc list-inside mt-4 space-y-2 font-semibold">
                     <li><strong>Uninterrupted Access:</strong> Our cleaning teams are granted access to complete areas after all construction work and trade activities in those areas have ceased.</li>
                     <li><strong>No Re-cleans Due to Other Trades:</strong> The pricing assumes that areas will not require re-cleaning due to dust, debris, or traffic from other trades after our clean has been completed.</li>
@@ -361,6 +358,43 @@
             </div>
         </section>
         
+        <!-- Special Discount Terms & Conditions -->
+        <section id="special-offer" class="mb-12">
+            <h2 class="section-title">Special Workflow Offer: Terms & Conditions</h2>
+            <div class="bg-gray-100 p-6 rounded-lg border">
+                <p class="mb-4">This proposal outlines a significant price reduction to <strong>$197,000</strong> based on a workflow that provides our teams with uninterrupted access to completed areas. This structure is designed to eliminate the costs associated with re-cleaning, which are typically factored into standard quotes.</p>
+                
+                <h3 class="font-bold text-lg mb-2">Proposed Workflow:</h3>
+                <p class="mb-4">The discount is contingent upon the following four-stage process for each area:</p>
+                <ol class="list-decimal list-inside space-y-2 mb-4 pl-4">
+                    <li><strong>Construction/Build Phase:</strong> Your teams complete the primary building work.</li>
+                    <li><strong>Initial Clean:</strong> Our team performs the builder's clean after your trades have vacated.</li>
+                    <li><strong>Defects/Fixing Phase:</strong> Your teams re-enter to complete fixes or address defects.</li>
+                    <li><strong>Final Clean:</strong> Our team performs the final, handover-ready clean.</li>
+                </ol>
+
+                <h3 class="font-bold text-lg mb-2">Financial Impact & Core Conditions:</h3>
+                <ul class="list-disc list-inside space-y-2 mb-4 pl-4">
+                    <li><strong>Discounted Price:</strong> By committing to this workflow, the total project price is reduced to $197,000.</li>
+                    <li><strong>Payment Terms:</strong> Invoices for each completed and billed stage must be paid in full no more than 38 days after the invoice date.</li>
+                </ul>
+
+                <h3 class="font-bold text-lg mb-2">Policy for Interruptions During the Final Clean</h3>
+                <p class="mb-4">We understand that despite careful planning, trades may need to re-enter a space during the project's final stages. This policy applies specifically to interruptions that necessitate re-cleaning during the <strong>Final Clean (stage 4)</strong> and does not affect the initial builder's clean.</p>
+
+                <h4 class="font-semibold mb-2">Process for Additional Cleaning:</h4>
+                 <p class="mb-4">Should an interruption occur that requires us to re-clean an area (e.g., an electrician works on defects during the final carpet clean, leaving debris), the following process will be initiated:</p>
+                <ol class="list-decimal list-inside space-y-2 mb-4 pl-4">
+                    <li><strong>Report & Document:</strong> Our on-site team will immediately document the situation and the scope of the required re-cleaning.</li>
+                    <li><strong>Submit for Approval:</strong> This documentation will be formally submitted to your site manager for approval before any extra work begins.</li>
+                    <li><strong>Execute & Bill Separately:</strong> Once approved, the additional cleaning will be performed. These hours will be billed separately from the main contract price.</li>
+                </ol>
+
+                <h4 class="font-semibold mb-2">Billing for Approved Additional Hours:</h4>
+                <p>To ensure fairness and transparency, any approved, additional hours for re-cleaning due to trade interruptions will be billed at a highly discounted, at-cost rate of <strong>$49 AUD per hour</strong>. This process ensures that you only pay for necessary, pre-approved work at a minimal rate, allowing you to maintain the significant overall project discount.</p>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer class="text-center pt-8 mt-8 border-t">
              <p class="text-lg font-semibold">We look forward to continuing our partnership with SHAPE.</p>
@@ -410,4 +444,5 @@
     </script>
 </body>
 </html>
+
 
